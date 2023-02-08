@@ -41,10 +41,9 @@
 
     <!-- Rendering Rotating cubes :- -->
     <!-- LC -->
-    <a-box position="0 0.5 0" 
+    <a-box 
     multisrc="srcs:#right,#left,#top,#bottom,#front,#back" 
     gps-new-entity-place="latitude: 25.26197793652688 ; longitude: 82.98426234342745"
-    material="transparent: true; opacity: 0.95; side: double;"
     >
         <a-animation attribute="rotation"
         to="0 360 0"
@@ -54,7 +53,7 @@
         </a-animation> I
     </a-box>
     
-    <a-entity camera></a-entity>
+    <!-- <a-camera gps-new-camera='' rotation-reader> </a-camera> -->
 
     </a-scene>
 
