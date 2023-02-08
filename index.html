@@ -41,7 +41,11 @@
 
     <!-- Rendering Rotating cubes :- -->
     <!-- LC -->
-    <a-box position="0 0 0" height="1" depth="1" width="1" multisrc="srcs:#right,#left,#top,#bottom,#front,#back" gps-new-entity-place="latitude: 25.26197793652688 ; longitude: 82.98426234342745">
+    <a-box position="0 0.5 0" 
+    multisrc="srcs:#right,#left,#top,#bottom,#front,#back" 
+    gps-new-entity-place="latitude: 25.26197793652688 ; longitude: 82.98426234342745"
+    material="transparent: true; opacity: 0.95; side: double;"
+    >
         <a-animation attribute="rotation"
         to="0 360 0"
         repeat="indefinite"
