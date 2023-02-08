@@ -11,17 +11,52 @@
 </script>
 
 <script>
-    AFRAME.registerComponent('clicker', {
-        init: function() {
-            this.el.addEventListener('click', e => {
-                alert('Box clicked!');
-            });
-        }
-    });
+
+    // AFRAME.registerComponent('clicker', {
+    //     init: function() {
+    //         this.el.addEventListener('click', e => {
+    //             alert('Box clicked!');
+    //         });
+    //     }
+    // });
+
 </script>
 
 </head>
 <body>
+
+    <a-scene cursor="rayOrigin: mouse; fuse: true; fuseTimeout: 0;" raycaster="objects: [gps-new-entity-place];"
+    vr-mode-ui="enabled: false" embedded
+    arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;">
+    
+    <!-- Asset Management System -->
+    <a-assets>
+        <img id="right" src="images/web.jpeg">
+        <img id="left" src="images/web.jpeg">
+        <img id="top" src="images/web.jpg">
+        <img id="bottom" src="images/web.jpeg">
+        <img id="front" src="images/web.jpeg">
+        <img id="back" src="images/web.jpeg">
+    </a-assets>
+
+    <!-- Rendering Rotating cubes :- -->
+    <!-- LC -->
+    <a-box position="0 0 0" height="1" depth="1" width="1" multisrc="srcs:#right,#left,#top,#bottom,#front,#back" gps-new-entity-place="latitude: 25.26197793652688 ; longitude: 82.98426234342745">
+        <a-animation attribute="rotation"
+        to="0 360 0"
+        repeat="indefinite"
+        dur="2000"
+        easing="linear">
+        </a-animation> I
+    </a-box>
+
+    </a-scene>
+
+</body>
+</html>
+
+
+<!-- 
 <a-scene 
    vr-mode-ui='enabled: false' 
    arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' 
@@ -33,5 +68,4 @@
     <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 25.26197793652688 ; longitude: 82.98426234342745" scale="2 2 2" clicker></a-entity>
 
 </a-scene>
-</body>
-</html>
+ -->
